@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name = "viewport" content="width=device-width, intial-scale=1">
+	<title>Bootstrap 4</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+	<h2><code>embed</code> <small class = "text-muted">or</small> <code>object</code> <small class = "text-muted">or</small> <code>iframe</code></h2>
+	
+	<hr>
+
+	<p class = "lead">
+		Tag သုံးမျိုးလုံး ကို HTML5 မာ သုံးလို့ရတယ်။ သုံးမျိုးလုံးက အသုံးအနုန်း အရ ရူပ်ထွေးနိုင်လောက်အောင်ကို ဆင်တူကြတယ်။
+	</p>
+
+	<dl>
+		<dt><code>&lt;embed/&gt;</code></dt>
+		<dd>
+			<ul>
+				<li>အဓိကတော့ <strong>non-HTML</strong> application နဲ့ လုပ်ရှားနေတဲ့ <strong>content (Animations)</strong> တွေမာ အသုံးများပါတယ်။</li>
+				<li>
+					<code>&lt;embed&gt;</code> က HTML5 မတိုင်ခင် Standard မဖြစ်ခဲ့ဘူး HTML5 မာ ပြန်ပြီး Standardised ထားတော့ ခောတ်သစ် technology ဖြစ်သွားပြန်တယ်။
+				</li>
+				<li><code>&lt;svg&gt;</code> နဲ့ အလုပ်လုပ်တဲ့နေအခါ <code>getSVGDocument()</code> method သုံးပြီး embedded <strong>SVG document</strong> ကို <strong>Parent Element</strong> ကနေ <strong>access</strong> လုပ်လို့ရပါတယ်။</li>
+				<li><code>&lt;embed&gt;</code> ရဲ့ အဓိက ပြဿနာကတော့ browser support ပါပဲ။ <a href="https://caniuse.com/#feat=mdn-api_htmlembedelement" target = "_blank">ဒီမာ စစ်ပါ</a></li>
+
+			</ul>
+		</dd>
+
+		<dt><code>&lt;object&gt;</code><code>&lt;/object&gt;</code></dt>
+		<dd>
+			<ul>
+				<li>Animation တွေကို support ပေးတဲ့အတွက် <code>svg</code> တွေအတွက် အကောင်းဆုံးကတော့ <code>&lt;object&gt;</code> ပါပဲ။</li>
+				<li>
+					<code>&lt;object&gt;</code> မှာ ကိုယ်သုံးထားတဲ့ plugin မရှိရင် မရှိကြောင်း fallback content ထည့်ပေးလို့ရတယ်။
+				</li>
+				<li><code>&lt;iframe&gt;</code> အစား <code>&lt;object&gt;</code> ကို သုံးသင့်တဲ့ အကြောင်းရင်းတခုက - <code>&lt;object&gt;</code> ဟာ သူ့ထဲ ထည့်ထားတဲ့ content ကို <code>&lt;object&gt;</code> ရဲ့ dimension နဲ့ fit အောင်ထားနိုင်တယ်။</code></li>			</ul>
+		</dd>
+
+		<dt><code>&lt;iframe&gt;</code><code>&lt;/iframe&gt;</code></dt>
+		<dd>
+			<ul>
+				<li>အဓိကတော့ အခြား <strong>domain</strong>, <strong>sub-domain</strong> ဒါမှမဟုတ် ကိုယ့် <strong>domain</strong> ထဲက external resources တွေကို ထည့်တဲ့ချိန် သုံးတယ်။</li>
+				<li>သူ့အားသားချက်က ကိုယ် set လိုက်တဲ့ content က live ဖြစ်တယ်။</li>
+			</ul>
+		</dd>
+	</dl>
+
+	<h3>My Point of View</h3>
+	
+		<hr>
+
+		<p>
+			<code>object</code> ကို ရှေးခောတ် <code>&lt;embed&gt;</code> support မလုပ်တဲ့ browser မာပဲသုံးပါ။
+		</p>
+
+		<p>
+			Browser က <code>&lt;embed&gt;</code> support ရင်တော့ အကောင်းဆုံးတော့ embed ကိုပဲသုံးပါ။
+		</p>
+
+		<p>
+			ကိုယ်ချိတ်ချင်တဲ့ Content က <strong>Static</strong> ဖြစ်ပြီးတော့ <strong>SVG</strong>, or အခြား <strong>Flash Content</strong> ဖြစ်နေရင် တော့ <code>&lt;embed&gt;</code> ဒါမှမဟုတ် <code>&lt;object&gt;</code> ကိုပဲ သုံးပါ
+		</p>
+
+		<p>
+			Content က <strong>Live Content</strong> ဒါမှမဟုတ် <strong>HTML Content</strong> တွေဆိုရင်တော့ <code>&lt;iframe&gt;</code> က အကောင်းဆုံးပါပဲ။
+		</p>
+	</dl>
+
+	<footer>
+		<h4>Sources</h4>
+		<hr>
+		<div class="links d-flex flex-column">
+			<a href="http://bencreasy.com/object-versus-embed/">bencreacy.com</a>
+			<a href="https://stackoverflow.com/questions/16660559/difference-between-iframe-embed-and-object-elements">stackoverflow.com</a>
+			<a href="https://stackoverflow.com/questions/1244788/embed-vs-object?noredirect=1&lq=1">stackoverflow.com</a>
+			<a href="https://html-shark.com/HTML/EmbeddedObjects.htm">html-shark.com</a>
+		</div>
+
+		<br>
+	</footer>
+	
+</div>
+
+</body>
+</html>
